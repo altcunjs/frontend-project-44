@@ -3,7 +3,7 @@ import { SayYourName } from '../src/cli.js';
 import { getRandomNumber, evenCorrectAnswer } from './even.js';
 import { getRandomOperator, calculatorCorrectAnswer } from './calculator.js';
 
-export function Engine(mode) {
+export const Engine = (mode) => {
   const playerName = SayYourName();
 
   let correctAnswersCount = 0;
@@ -45,4 +45,4 @@ export function Engine(mode) {
   if (correctAnswersCount === 3) {
     console.log(`Congratulations, ${playerName}!`);
   }
-}
+};
