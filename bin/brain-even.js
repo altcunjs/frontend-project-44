@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { QuestionAnswer } from '../src/even.js';
+import { Engine } from '../src/index.js';
 
-QuestionAnswer();
+Engine('even');
