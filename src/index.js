@@ -7,28 +7,30 @@ export const Engine = (mode) => {
   const playerName = SayYourName();
 
   let correctAnswersCount = 0;
-  let condition;
-  let question;
-  let correctAnswer;
+  let condition, question, correctAnswer;
 
   while (correctAnswersCount < 3) {
     switch (mode) {
       case 'even':
         let number = getRandomNumber();
-        condition =
-          'Answer "yes" if the number is even, otherwise answer "no".';
-        question = `Question: ${number}`;
-        correctAnswer = evenCorrectAnswer(number);
+        [condition, question, correctAnswer] = [
+          'Answer "yes" if the number is even, otherwise answer "no".',
+          `Question: ${number}`,
+          evenCorrectAnswer(number),
+        ];
         break;
 
       case 'calculator':
-        let number1 = getRandomNumber();
-        let number2 = getRandomNumber();
-        let operator = getRandomOperator();
-
-        condition = 'What is the result of the expression?';
-        question = `Question: ${number1} ${operator} ${number2}`;
-        correctAnswer = calculatorCorrectAnswer(number1, number2, operator);
+        let [number1, number2, operator] = [
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomOperator(),
+        ];
+        [condition, question, correctAnswer] = [
+          'What is the result of the expression?',
+          `Question: ${number1} ${operator} ${number2}`,
+          calculatorCorrectAnswer(number1, number2, operator),
+        ];
         break;
     }
     // Логика
