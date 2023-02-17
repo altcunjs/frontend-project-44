@@ -12,20 +12,24 @@ export const Engine = (mode) => {
   let correctAnswer;
 
   while (correctAnswersCount < 3) {
-    if (mode === 'even') {
-      let number = getRandomNumber();
-      condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-      question = `Question: ${number}`;
-      correctAnswer = evenCorrectAnswer(number);
-    }
-    if (mode === 'calculator') {
-      let number1 = getRandomNumber();
-      let number2 = getRandomNumber();
-      let operator = getRandomOperator();
+    switch (mode) {
+      case 'even':
+        let number = getRandomNumber();
+        condition =
+          'Answer "yes" if the number is even, otherwise answer "no".';
+        question = `Question: ${number}`;
+        correctAnswer = evenCorrectAnswer(number);
+        break;
 
-      condition = 'What is the result of the expression?';
-      question = `Question: ${number1} ${operator} ${number2}`;
-      correctAnswer = calculatorCorrectAnswer(number1, number2, operator);
+      case 'calculator':
+        let number1 = getRandomNumber();
+        let number2 = getRandomNumber();
+        let operator = getRandomOperator();
+
+        condition = 'What is the result of the expression?';
+        question = `Question: ${number1} ${operator} ${number2}`;
+        correctAnswer = calculatorCorrectAnswer(number1, number2, operator);
+        break;
     }
     // Логика
     console.log(condition);
