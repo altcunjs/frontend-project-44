@@ -40,6 +40,7 @@ export const Engine = (mode) => {
           `Question: ${number3} ${number4}`,
           correctAnswerGCD(number3, number4),
         ];
+        break;
     }
     // Логика
     console.log(condition);
