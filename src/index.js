@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { SayYourName } from '../src/cli.js';
 import { getRandomNumber, evenCorrectAnswer } from './even.js';
 import { getRandomOperator, calculatorCorrectAnswer } from './calculator.js';
+import { correctAnswerGCD } from './gcd.js';
 
 export const Engine = (mode) => {
   const playerName = SayYourName();
@@ -32,6 +33,13 @@ export const Engine = (mode) => {
           calculatorCorrectAnswer(number1, number2, operator),
         ];
         break;
+      case 'gcd':
+        let [number3, number4] = [getRandomNumber(), getRandomNumber()];
+        [condition, question, correctAnswer] = [
+          'Find the greatest common divisor of given numbers.',
+          `Question: ${number3} ${number4}`,
+          correctAnswerGCD(number3, number4),
+        ];
     }
     // Логика
     console.log(condition);
