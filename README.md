@@ -8,3 +8,5 @@
 [**Calculator game demonstration**](https://asciinema.org/a/w77lLUWmBixdRqYwkJCXwukRy)
 
 [**GCD game demonstration**](https://asciinema.org/a/m74m1YgxejX7gohFkfh2ulhPg)
+
+[**Progression game demonstration**](https://asciinema.org/a/i5Kx0Qbet5dFW8SJQzdjlTFUo)
