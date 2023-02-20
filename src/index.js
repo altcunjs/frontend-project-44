@@ -3,6 +3,7 @@ import { SayYourName } from '../src/cli.js';
 import { getRandomNumber, evenCorrectAnswer } from './even.js';
 import { getRandomOperator, calculatorCorrectAnswer } from './calculator.js';
 import { correctAnswerGCD } from './gcd.js';
+import { getProgression, correctAnswerProgression } from './progression.js';
 
 export const Engine = (mode) => {
   const playerName = SayYourName();
@@ -41,6 +42,13 @@ export const Engine = (mode) => {
           correctAnswerGCD(number3, number4),
         ];
         break;
+      case 'progression':
+        let progression = getProgression();
+        [condition, question, correctAnswer] = [
+          'What number is missing in the progression?',
+          `Question: ${progression}`,
+          correctAnswerProgression(progression),
+        ];
     }
     // Логика
     console.log(condition);

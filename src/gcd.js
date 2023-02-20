@@ -1,12 +1,12 @@
-export const correctAnswerGCD = (number1, number2) => {
+export const correctAnswerGCD = (a, b) => {
   let result;
-  while (number1 != 0 && number2 != 0) {
-    if (number1 > number2) {
-      number1 = number1 % number2;
+  while (a != 0 && b != 0) {
+    if (a > b) {
+      a = a % b;
     } else {
-      number2 = number2 % number1;
+      b = b % a;
     }
   }
-  result = number1 + number2;
+  result = a + b;
   return result.toString();
 };
