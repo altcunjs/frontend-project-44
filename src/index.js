@@ -1,9 +1,16 @@
 import readlineSync from 'readline-sync';
-import { SayYourName } from '../src/cli.js';
-import { getRandomNumber, evenCorrectAnswer } from './even.js';
-import { getRandomOperator, calculatorCorrectAnswer } from './calculator.js';
-import { correctAnswerGCD } from './gcd.js';
-import { getProgression, correctAnswerProgression } from './progression.js';
+import { SayYourName } from './cli.js';
+import { getRandomNumber, evenCorrectAnswer } from '../games/even.js';
+import {
+  getRandomOperator,
+  calculatorCorrectAnswer,
+} from '../games/calculator.js';
+import { correctAnswerGCD } from '../games/gcd.js';
+import {
+  getProgression,
+  correctAnswerProgression,
+} from '../games/progression.js';
+import { isPrime } from '../games/prime.js';
 
 export const Engine = (mode) => {
   const playerName = SayYourName();
@@ -49,6 +56,15 @@ export const Engine = (mode) => {
           `Question: ${progression}`,
           correctAnswerProgression(progression),
         ];
+        break;
+      case 'prime':
+        let num = getRandomNumber();
+        [condition, question, correctAnswer] = [
+          'Answer "yes" if given number is prime. Otherwise answer "no"',
+          `Question: ${num}`,
+          isPrime(num),
+        ];
+        break;
     }
     // Логика
     console.log(condition);
