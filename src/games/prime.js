@@ -14,7 +14,7 @@ export const isPrime = (number) => {
 
 const gameLogic = () => {
   let number = getRandomNumber();
-  let question = number;
+  let question = `Question: ${number}`;
   let correctAnswer = isPrime(number);
   return [question, correctAnswer];
 };

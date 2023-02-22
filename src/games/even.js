@@ -10,7 +10,7 @@ const isCorrect = (number) => {
 
 const gameLogic = () => {
   const number = getRandomNumber();
-  let question = number;
+  let question = `Question: ${number}`;
   let correctAnswer = isCorrect(number);
   return [question, correctAnswer];
 };

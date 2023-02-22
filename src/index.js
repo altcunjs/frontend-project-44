@@ -17,7 +17,7 @@ export const Engine = (condition, gameLogic) => {
   while (correctAnswersCount < 3) {
     const [question, correctAnswer] = gameLogic();
 
-    console.log('Question: ' + question);
+    console.log(question);
     const userAnswer = readlineSync.question('Enter your answer:');
     console.log(`Your answer: ${userAnswer}`);
 

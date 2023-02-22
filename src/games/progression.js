@@ -37,7 +37,7 @@ const isCorrect = (str) => {
 
 const gameLogic = () => {
   let progression = getProgression();
-  let question = progression;
+  let question = `Question: ${progression}`;
   let correctAnswer = isCorrect(progression);
   return [question, correctAnswer];
 };

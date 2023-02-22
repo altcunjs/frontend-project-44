@@ -30,7 +30,7 @@ const gameLogic = () => {
     getRandomNumber(1, 10),
     getRandomOperator(1, 10),
   ];
-  let question = `${number1} ${operator} ${number2}`;
+  let question = `Question: ${number1} ${operator} ${number2}`;
   let correctAnswer = isCorrect(number1, number2, operator);
   return [question, correctAnswer];
 };
