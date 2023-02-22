@@ -15,7 +15,8 @@ const getProgression = () => {
     progression[i] = progression[i - 1] + progressionStep; //Каждый элемент массива, начиная с [1] равен предыдущему элементу + шаг прогресии
   }
   progression[randomElement] = '..';
-  return progression.toString();
+  progression = progression.toString();
+  return progression.replace(/,/g, ' ');
 };
 
 const isCorrect = (str) => {
