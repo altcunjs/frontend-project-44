@@ -1,9 +1,8 @@
 import { Engine, getRandomNumber } from '../index.js';
 
-const condition =
-  'Answer "yes" if given number is prime. Otherwise answer "no"';
+const condition = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-export const isPrime = (number) => {
+const isPrime = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
       return 'no';
@@ -13,12 +12,12 @@ export const isPrime = (number) => {
 };
 
 const gameLogic = () => {
-  let number = getRandomNumber();
-  let question = `Question: ${number}`;
-  let correctAnswer = isPrime(number);
+  const number = getRandomNumber();
+  const question = `Question: ${number}`;
+  const correctAnswer = isPrime(number);
   return [question, correctAnswer];
 };
 
-export const startGame = () => {
+export default () => {
   Engine(condition, gameLogic);
 };
