@@ -1,3 +1,27 @@
+# Brain - Games:
+
+This project consists of five logic games:
+
+- Even game
+- Calculator game
+- GCD game
+- Progression game
+- Prime game
+
+To win each game, you must answer 3 questions correctly.
+
+### How to install:
+
+_make install_
+
+Command list:
+
+- brain-even
+- brain-calc
+- brain-gcd
+- brain prime
+- brain-progression
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/altcunjs/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/altcunjs/frontend-project-44/actions)
