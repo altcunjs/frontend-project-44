@@ -38,7 +38,8 @@ The user is shown a number. You must determine whether the number is prime or no
 <h3>To win each game, you must answer 3 questions correctly.</h3>
 
 <h1>How to install:</h1>
-Enter **make install** and **npm link** into the terminal.
+
+Enter *make install* and *npm link* into the terminal.
 
 
 <h1>Command list:</h1>
