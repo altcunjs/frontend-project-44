@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { SayYourName } from './cli.js';
 
 export const getRandomNumber = (min = 1, max = 100) => {
   min = Math.ceil(min);
@@ -9,9 +10,7 @@ export const getRandomNumber = (min = 1, max = 100) => {
 export const Engine = (condition, gameLogic) => {
   let correctAnswersCount = 0;
 
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log('Hello ' + userName + '!');
+  const userName = SayYourName();
 
   console.log(condition);
 
