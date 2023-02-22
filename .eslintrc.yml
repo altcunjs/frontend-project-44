@@ -3,16 +3,17 @@ plugins:
   - jest
 env:
   node: true
-extends: 
-- 'airbnb-base'
-- 'plugin:jest/recommended'
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
 overrides: []
 parserOptions:
   ecmaVersion: latest
-rules: 
+rules:
   no-console: 0
+  no-param-reassign: 0
   import/extensions: # FIXME: remove when rule will be adjusted for new nodejs version
     - error
     - ignorePackages
     - js: always
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
