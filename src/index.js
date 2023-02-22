@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { SayYourName } from './cli.js';
+import SayYourName from './cli.js';
 
 export const getRandomNumber = (min, max) => {
   min = Math.ceil(min);

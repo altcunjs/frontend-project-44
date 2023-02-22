@@ -20,14 +20,18 @@ const isCorrect = (number1, number2, operator) => {
       break;
     case '*':
       result = number1 * number2;
+      break;
     default:
-      `We haven't added this operator yet.`;
+      'Operator does not exist';
+      break;
   }
   return result.toString();
 };
 
 const gameLogic = () => {
-  const [number1, number2, operator] = [getRandomNumber(1, 10), getRandomNumber(1, 10), getRandomOperator(1, 10)];
+  const number1 = getRandomNumber(1, 10);
+  const number2 = getRandomNumber(1, 10);
+  const operator = getRandomOperator();
   const question = `Question: ${number1} ${operator} ${number2}`;
   const correctAnswer = isCorrect(number1, number2, operator);
   return [question, correctAnswer];
