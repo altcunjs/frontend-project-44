@@ -16,11 +16,12 @@ const getProgression = () => {
   }
   progression[randomElement] = '..';
   progression = progression.toString();
-  return progression.replace(/,/g, ' ');
+  progression = progression.replace(/,/g, ' ');
+  return progression;
 };
 
 const isCorrect = (str) => {
-  let arr = str.split(',');
+  let arr = str.split(' ');
 
   let result;
   let [firstElement, secondElement] = arr;
