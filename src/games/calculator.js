@@ -22,7 +22,7 @@ const isCorrect = (number1, number2, operator) => {
       result = number1 * number2;
       break;
     default:
-      'Operator does not exist';
+      result = 'Operator does not exist';
       break;
   }
   return result.toString();

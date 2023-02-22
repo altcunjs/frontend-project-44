@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
 import SayYourName from './cli.js';
 
+/* eslint-disable no-param-reassign */
 export const getRandomNumber = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-
+/* eslint-enable no-param-reassign */
 export const Engine = (condition, gameLogic) => {
   let correctAnswersCount = 0;
 

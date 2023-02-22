@@ -3,14 +3,16 @@ import { Engine, getRandomNumber } from '../index.js';
 const condition = 'Find the greatest common divisor of given numbers.';
 
 const isCorrect = (a, b) => {
-  while (a !== 0 && b !== 0) {
-    if (a > b) {
-      a %= b;
+  let num1 = a;
+  let num2 = b;
+  while (num1 !== 0 && num2 !== 0) {
+    if (num1 > num2) {
+      num1 %= num2;
     } else {
-      b %= a;
+      num2 %= num1;
     }
   }
-  const result = a + b;
+  const result = num1 + num2;
   return result.toString();
 };
 
