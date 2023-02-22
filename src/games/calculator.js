@@ -28,7 +28,7 @@ const isCorrect = (number1, number2, operator) => {
   return result.toString();
 };
 
-const gameLogic = () => {
+const calculatorGameLogic = () => {
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
   const operator = getRandomOperator();
@@ -38,5 +38,5 @@ const gameLogic = () => {
 };
 
 export default () => {
-  Engine(condition, gameLogic);
+  Engine(condition, calculatorGameLogic);
 };

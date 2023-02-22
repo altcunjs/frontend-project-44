@@ -37,7 +37,7 @@ const isCorrect = (str) => {
   return result.toString();
 };
 
-const gameLogic = () => {
+const progressionGameLogic = () => {
   const progression = getProgression();
   const question = `Question: ${progression}`;
   const correctAnswer = isCorrect(progression);
@@ -45,5 +45,5 @@ const gameLogic = () => {
 };
 
 export default () => {
-  Engine(condition, gameLogic);
+  Engine(condition, progressionGameLogic);
 };

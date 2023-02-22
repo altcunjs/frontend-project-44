@@ -11,7 +11,7 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const gameLogic = () => {
+const primeGameLogic = () => {
   const number = getRandomNumber(1, 1000);
   const question = `Question: ${number}`;
   const correctAnswer = isPrime(number);
@@ -19,5 +19,5 @@ const gameLogic = () => {
 };
 
 export default () => {
-  Engine(condition, gameLogic);
+  Engine(condition, primeGameLogic);
 };

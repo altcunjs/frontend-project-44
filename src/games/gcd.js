@@ -16,7 +16,7 @@ const isCorrect = (a, b) => {
   return result.toString();
 };
 
-const gameLogic = () => {
+const gcdGameLogic = () => {
   const [number1, number2] = [getRandomNumber(1, 100), getRandomNumber(1, 100)];
   const question = `Question: ${number1} ${number2}`;
   const correctAnswer = isCorrect(number1, number2);
@@ -24,5 +24,5 @@ const gameLogic = () => {
 };
 
 export default () => {
-  Engine(condition, gameLogic);
+  Engine(condition, gcdGameLogic);
 };

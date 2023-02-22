@@ -9,7 +9,7 @@ const isCorrect = (number) => {
   return correct;
 };
 
-const gameLogic = () => {
+const evenGameLogic = () => {
   const number = getRandomNumber(1, 100);
   const question = `Question: ${number}`;
   const correctAnswer = isCorrect(number);
@@ -17,5 +17,5 @@ const gameLogic = () => {
 };
 
 export default () => {
-  Engine(condition, gameLogic);
+  Engine(condition, evenGameLogic);
 };
