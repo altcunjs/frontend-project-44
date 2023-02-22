@@ -15,8 +15,8 @@ const isCorrect = (a, b) => {
 };
 
 const gameLogic = () => {
-  const [number1, number2] = [getRandomNumber(), getRandomNumber()];
-  constquestion = `Question: ${number1} ${number2}`;
+  const [number1, number2] = [getRandomNumber(1, 100), getRandomNumber(1, 100)];
+  const question = `Question: ${number1} ${number2}`;
   const correctAnswer = isCorrect(number1, number2);
   return [question, correctAnswer];
 };

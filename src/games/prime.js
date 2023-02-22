@@ -12,7 +12,7 @@ const isPrime = (number) => {
 };
 
 const gameLogic = () => {
-  const number = getRandomNumber();
+  const number = getRandomNumber(1, 1000);
   const question = `Question: ${number}`;
   const correctAnswer = isPrime(number);
   return [question, correctAnswer];
