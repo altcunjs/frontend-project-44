@@ -9,7 +9,8 @@
 
 A number is shown to the user. You must determine whether the number is even or odd.
 
-[![asciicast](https://asciinema.org/a/sCKa0XWpOrPCmdwYxS0MnEXs1.png)](https://asciinema.org/a/sCKa0XWpOrPCmdwYxS0MnEXs1)
+<a href="https://asciinema.org/a/sCKa0XWpOrPCmdwYxS0MnEXs1?autoplay=1" target="_blank"><img src="https://asciinema.org/a/sCKa0XWpOrPCmdwYxS0MnEXs1.png" width="836"/></a>
+
 
 
 - Calculator game
