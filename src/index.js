@@ -1,36 +1,27 @@
 import readlineSync from 'readline-sync';
-import SayYourName from './cli.js';
 
-/* eslint-disable no-param-reassign */
-export const getRandomNumber = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
-/* eslint-enable no-param-reassign */
-export const Engine = (condition, gameLogic) => {
-  let correctAnswersCount = 0;
+const roundsCount = 3;
 
-  const userName = SayYourName();
+export default (rules, makeRound) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
-  console.log(condition);
+  console.log(rules);
 
-  while (correctAnswersCount < 3) {
-    const [question, correctAnswer] = gameLogic();
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, answer] = makeRound();
 
     console.log(question);
     const userAnswer = readlineSync.question('Enter your answer:');
     console.log(`Your answer: ${userAnswer}`);
 
-    if (userAnswer === correctAnswer) {
-      correctAnswersCount += 1;
+    if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}'is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!'`);
-      break;
+      console.log(`'${userAnswer}'is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${userName}!'`);
+      return;
     }
   }
-  if (correctAnswersCount === 3) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
