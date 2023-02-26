@@ -18,5 +18,5 @@ rules:
   no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
   max-len:
     - error
-    - ignoreComments: true
-    - ignoreTrailingComments': true
+    - ignoreComments
+    - ignoreTrailingComments
