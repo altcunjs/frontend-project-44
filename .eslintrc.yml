@@ -16,4 +16,4 @@ rules:
     - ignorePackages
     - js: always
   no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
-  max-len: ['error', { 'ignoreComments': true }]
+  max-len: ['error', { 'ignoreComments': true }, { 'ignoreTrailingComments': true }]
