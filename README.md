@@ -16,25 +16,28 @@ A number is shown to the user. You must determine whether the number is even or 
 
 The user is shown a random mathematical expression to calculate
 
-[**Calculator game demonstration**](https://asciinema.org/a/w77lLUWmBixdRqYwkJCXwukRy)
+
+[![asciicast](https://asciinema.org/a/w77lLUWmBixdRqYwkJCXwukRy.png)](https://asciinema.org/a/w77lLUWmBixdRqYwkJCXwukRy)
 
 - GCD game
 
 The user is shown two random numbers. The user must calculate and enter the greatest common divisor of these numbers.
 
-[**GCD game demonstration**](https://asciinema.org/a/m74m1YgxejX7gohFkfh2ulhPg)
+[![asciicast](https://asciinema.org/a/m74m1YgxejX7gohFkfh2ulhPg.png)](https://asciinema.org/a/m74m1YgxejX7gohFkfh2ulhPg)
 
 - Progression game
 
 The user is shown a series of numbers that form an arithmetic progression. One number in the progression is missing. The user must determine that number.
 
-[**Progression game demonstration**](https://asciinema.org/a/i5Kx0Qbet5dFW8SJQzdjlTFUo)
+[![asciicast](https://asciinema.org/a/i5Kx0Qbet5dFW8SJQzdjlTFUo.png)](https://asciinema.org/a/i5Kx0Qbet5dFW8SJQzdjlTFUo)
+
 
 - Prime game
 
 The user is shown a number. You must determine whether the number is prime or not.
 
-[**Prime game demonstration**](https://asciinema.org/a/0jOTQGZoCpaN55aWjuj7lg7uD)
+[![asciicast](https://asciinema.org/a/0jOTQGZoCpaN55aWjuj7lg7uD.png)](https://asciinema.org/a/0jOTQGZoCpaN55aWjuj7lg7uD)
+
 
 <h3>To win each game, you must answer 3 questions correctly.</h3>
 
