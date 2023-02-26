@@ -50,12 +50,21 @@ Enter `make install` and `npm link` into the terminal.
 
 
 <h1>Command list:</h1>
-
-` brain-even,
- brain-calc,
- brain-gcd,
- brain prime,
- brain-progression`
+  
+ Enter to run Even Game:
+ `brain-even`
+  
+ Enter to run Calculator Game:
+ `brain-calc`
+  
+ Enter to run GCD Game:
+ `brain-gcd`
+  
+ Enter to run Prime Game:
+ `brain prime`
+  
+ Enter to run Progression Game:
+ `brain-progression`
 
 
 
