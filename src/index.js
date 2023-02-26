@@ -16,12 +16,11 @@ export default (rules, makeRound) => {
     const userAnswer = readlineSync.question('Enter your answer:');
     console.log(`Your answer: ${userAnswer}`);
 
-    if (userAnswer === answer) {
-      console.log('Correct!');
-    } else {
+    if (userAnswer !== answer) {
       console.log(`'${userAnswer}'is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${userName}!'`);
       return;
     }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
 };
