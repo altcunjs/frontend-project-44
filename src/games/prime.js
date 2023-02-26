@@ -1,8 +1,9 @@
-import { Engine, getRandomNumber } from '../index.js';
+import engine from '../index.js';
+import { getRandomInRange } from '../utils.js';
 
-const condition = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-const isPrime = (number) => {
+const getAnswer = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
       return 'no';
@@ -11,13 +12,13 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const primeGameLogic = () => {
-  const number = getRandomNumber(1, 1000);
+const makeRound = () => {
+  const number = getRandomInRange(1, 1000);
   const question = `Question: ${number}`;
-  const correctAnswer = isPrime(number);
-  return [question, correctAnswer];
+  const answer = getAnswer(number);
+  return [question, answer];
 };
 
 export default () => {
-  Engine(condition, primeGameLogic);
+  engine(rules, makeRound);
 };

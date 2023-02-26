@@ -1,15 +1,9 @@
-import { Engine, getRandomNumber } from '../index.js';
+import engine from '../index.js';
+import { getRandomInRange, getRandomOperator } from '../utils.js';
 
-const condition = 'What is the result of the expression?';
+const rules = 'What is the result of the expression?';
 
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * operators.length);
-  const result = operators[randomIndex];
-  return result;
-};
-
-const isCorrect = (number1, number2, operator) => {
+const getAnswer = (number1, number2, operator) => {
   let result;
   switch (operator) {
     case '+':
@@ -28,15 +22,15 @@ const isCorrect = (number1, number2, operator) => {
   return result.toString();
 };
 
-const calculatorGameLogic = () => {
-  const number1 = getRandomNumber(1, 10);
-  const number2 = getRandomNumber(1, 10);
+const makeRound = () => {
+  const number1 = getRandomInRange(1, 10);
+  const number2 = getRandomInRange(1, 10);
   const operator = getRandomOperator();
   const question = `Question: ${number1} ${operator} ${number2}`;
-  const correctAnswer = isCorrect(number1, number2, operator);
-  return [question, correctAnswer];
+  const answer = getAnswer(number1, number2, operator);
+  return [question, answer];
 };
 
 export default () => {
-  Engine(condition, calculatorGameLogic);
+  engine(rules, makeRound);
 };

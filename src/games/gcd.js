@@ -1,8 +1,9 @@
-import { Engine, getRandomNumber } from '../index.js';
+import engine from '../index.js';
+import { getRandomInRange } from '../utils.js';
 
-const condition = 'Find the greatest common divisor of given numbers.';
+const rules = 'Find the greatest common divisor of given numbers.';
 
-const isCorrect = (a, b) => {
+const getAnswer = (a, b) => {
   let num1 = a;
   let num2 = b;
   while (num1 !== 0 && num2 !== 0) {
@@ -16,13 +17,13 @@ const isCorrect = (a, b) => {
   return result.toString();
 };
 
-const gcdGameLogic = () => {
-  const [number1, number2] = [getRandomNumber(1, 100), getRandomNumber(1, 100)];
+const makeRound = () => {
+  const [number1, number2] = [getRandomInRange(1, 100), getRandomInRange(1, 100)];
   const question = `Question: ${number1} ${number2}`;
-  const correctAnswer = isCorrect(number1, number2);
-  return [question, correctAnswer];
+  const answer = getAnswer(number1, number2);
+  return [question, answer];
 };
 
 export default () => {
-  Engine(condition, gcdGameLogic);
+  engine(rules, makeRound);
 };

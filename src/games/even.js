@@ -1,21 +1,20 @@
-import { Engine, getRandomNumber } from '../index.js';
+import engine from '../index.js';
+import { getRandomInRange, isEven } from '../utils.js';
 
-const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (number) => number % 2 === 0;
-
-const isCorrect = (number) => {
+const getAnswer = (number) => {
   const correct = isEven(number) ? 'yes' : 'no';
   return correct;
 };
 
-const evenGameLogic = () => {
-  const number = getRandomNumber(1, 100);
+const makeRound = () => {
+  const number = getRandomInRange(1, 100);
   const question = `Question: ${number}`;
-  const correctAnswer = isCorrect(number);
-  return [question, correctAnswer];
+  const answer = getAnswer(number);
+  return [question, answer];
 };
 
 export default () => {
-  Engine(condition, evenGameLogic);
+  engine(rules, makeRound);
 };
