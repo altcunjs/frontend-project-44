@@ -14,10 +14,10 @@ const getProgression = (start, step, length) => {
 
 const makeRound = () => {
   const start = getRandomInRange(1, 20);
-  const step = getRandomInRange(2, 10);
-  const length = getRandomInRange(5, 10);
+  const step = getRandomInRange(2, 5);
+  const length = getRandomInRange(5, 7);
   const progression = getProgression(start, step, length);
-  const randomIndex = getRandomInRange(0, progression.length);
+  const randomIndex = getRandomInRange(0, length);
   const answer = progression[randomIndex].toString();
   progression[randomIndex] = '..';
   const question = `Question: ${progression.join(' ')}`;
