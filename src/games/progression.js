@@ -18,10 +18,10 @@ const makeRound = () => {
   const length = getRandomInRange(5, 10);
   const progression = getProgression(start, step, length);
   const randomIndex = getRandomInRange(0, progression.length);
-  const answer = progression[randomIndex].toString();
+  const answer = progression[randomIndex];
   progression[randomIndex] = '..';
-  const question = `Question: ${progression.join(' ').toString()}`;
-  return [question, answer];
+  const question = `Question: ${progression.join(' ')}`;
+  return [question, answer.toString()];
 };
 
 export default () => {
