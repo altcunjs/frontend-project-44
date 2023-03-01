@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 

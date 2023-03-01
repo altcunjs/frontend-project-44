@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const rules = 'What number is missing in the progression?';
 
