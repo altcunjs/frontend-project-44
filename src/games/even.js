@@ -1,17 +1,14 @@
 import engine from '../index.js';
-import { getRandomInRange, isEven } from '../utils.js';
+import { getRandomInRange } from '../utils.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getAnswer = (number) => {
-  const correct = isEven(number) ? 'yes' : 'no';
-  return correct;
-};
+const isEven = (number) => number % 2 === 0;
 
 const makeRound = () => {
   const number = getRandomInRange(1, 100);
   const question = `Question: ${number}`;
-  const answer = getAnswer(number);
+  const answer = isEven(number) ? 'yes' : 'no';
   return [question, answer];
 };
 
