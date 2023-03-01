@@ -11,7 +11,6 @@ export const getRandomOperator = () => {
 };
 
 const getAnswer = (number1, number2, operator) => {
-  let result;
   switch (operator) {
     case '+':
       return number1 + number2;
